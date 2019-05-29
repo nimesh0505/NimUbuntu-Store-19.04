@@ -1,0 +1,31 @@
+ body {
+background-image: url(/static/images/ooo2.jpeg);
+background-size: cover;
+font-weight: bold;
+font-family: 'Karla';
+
+height: 100vh;
+}
+
+
+
+.hero h1{
+    padding-left:100px; 
+    margin-top: 15%;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color:#d32f2f;
+    
+     
+} 
+
+.hero h2{
+    padding-left:100px; 
+    font-size: 20px;
+    
+    letter-spacing: 2px;
+    color: white;
+    
+     
+} 
+

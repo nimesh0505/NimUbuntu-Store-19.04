@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>NimUbuntu Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href="{{ url_for('static', filename='css/style-app.css') }}" rel="stylesheet" type="text/css" >
+
+<body>
+<form action="{{url_for('search')}}">
+  
+	<div class="w3-bar w3-black">
+	  <a href="{{url_for('home')}}" class="w3-bar-item w3-button">Home</a>
+	  <a href="{{url_for('category')}}" class="w3-bar-item w3-button">Category</a>
+	  <a href="{{url_for('applications')}}" class="w3-bar-item w3-button">Applications</a>
+	  <a href="{{url_for('about')}}" class="w3-bar-item w3-button">About</a>
+	    <a href="{{url_for('contributor')}}" class="w3-bar-item w3-button">Contributor</a>
+				<a  class="search-container"><input  type="text" id="mySearch"  placeholder="Search" id="search" name="search">
+				&nbsp;<i class="fa fa-search"></i></a>
+	</div>
+	<div class="box">
+		{% if head!="" %}
+			<p>{{head}}</p>
+		{%endif%}	
+
+		{% for application in app %}
+		<table >
+			
+		<tr>
+			<td ><h1>> {{ application['appname'] }}</h1></td>
+			<br>
+				<tr id="applist">
+				<td class="desc" >{{ application['appdesc'] }}</td>
+				<td ><a onclick="document.getElementById('{{ application['id'] }}').style.display='block'" class="button button3">Install</a></td>
+				<div id="{{ application['id'] }}" class="w3-modal">
+					<div class="w3-modal-content w3-card-5">
+						<header class="w3-container rang"> 
+						<span onclick="document.getElementById('{{ application['id'] }}').style.display='none'" 
+						class="w3-button w3-display-topright">&times;</span>
+						<h2>Install</h2>
+						</header>
+						<div class="w3-container">
+							<br>
+							<div class="link2">
+							 <i id="copy" class= "fa fa-file-code-o" style="font-size:24px" >&nbsp&nbsp<i>sudo apt-get update</i></i><br>
+							 <br>
+							 <i class= "fa fa-file-code-o" style="font-size:24px" >&nbsp&nbsp<i>{{application['applink']}}</i></i>
+							<br>
+							</div>
+							</div>
+							<footer class="w3-container rang ">
+							<h6>Copy the above command and paste in your terminal.</h6>
+						</footer>
+						</div>
+					</div>
+				</div>
+				</td>
+				</tr>
+			
+		</tr>
+		{% endfor %}
+	</table>
+
+	</div>
+
+</div>
+</form>
+
+</body>
+
+
+
+</html>

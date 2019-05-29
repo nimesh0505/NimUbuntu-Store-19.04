@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>NimUbuntu Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" >
+
+<body>
+<form id='mainpage' method="POST" action="">
+  
+	<div class="w3-bar w3-black" id ="navbar" >
+	  <a href="{{url_for('home')}}" class="w3-bar-item w3-button">Home</a>
+	  <a href="{{url_for('category')}}" class="w3-bar-item w3-button">Category</a>
+	  <a href="{{url_for('applications')}}" class="w3-bar-item w3-button">Applications</a>
+	  <a href="{{url_for('about')}}" class="w3-bar-item w3-button">About</a>
+	  <a href="{{url_for('contributor')}}" class="w3-bar-item w3-button">Contributor</a>
+	</div>
+	<section class="hero content">
+	  <h1><b>NimUbuntu Store 19.04.<b></h1>
+	  	<h2>Here you get all the <br>popular applications that <br>you can install via <b>terminal.</b></h2>
+	</section>
+</div>
+</form>
+
+</body>
+
+</html>

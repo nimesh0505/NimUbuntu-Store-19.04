@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>NimUbuntu Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href="{{ url_for('static', filename='css/style-app.css') }}" rel="stylesheet" type="text/css" >
+
+<body>
+<form action="{{url_for('search')}}">
+  
+	<div class="w3-bar w3-black" id ="navbar">
+	  <a href="{{url_for('home')}}" class="w3-bar-item w3-button">Home</a>
+	  <a href="{{url_for('category')}}" class="w3-bar-item w3-button">Category</a>
+	  <a href="{{url_for('applications')}}" class="w3-bar-item w3-button">Applications</a>
+	  <a href="{{url_for('about')}}" class="w3-bar-item w3-button">About</a>
+	    <a href="{{url_for('contributor')}}" class="w3-bar-item w3-button">Contributor</a>
+				<a  class="search-container"><input  type="text" id="mySearch"  placeholder="Search" id="search" name="search">
+				&nbsp;<i class="fa fa-search"></i></a>
+	</div>
+<div class="box content">
+		<table>
+			<tr>
+				<td>
+					<h1>  <i style="color:white;font-size:20px;">  No Match Found :( </i></h1>
+				</td>
+			</tr>
+</div>
+</form>
+
+</body>
+
+
+
+</html>

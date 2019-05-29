@@ -1,0 +1,126 @@
+body {
+background-color:rgba(6,32,47);
+background-size: cover;
+font-weight: bold;
+font-family: 'Karla';
+height: 100vh;
+}
+
+h1
+{
+	 color:#4CAF50;
+   font-size:30px ;
+ 	font-family: 'Karla';
+}
+
+h2
+{
+    font-family:Lato, sans-serif;
+    font-weight:normal;
+    letter-spacing: 1.5px;
+
+}
+p
+{
+  font-size: 30px;
+  font-family: 'Karla';
+  color: orange;
+  
+}
+
+.box
+{
+	padding-left: 15%;
+	text-align:left;
+  margin-top: 0;
+  width: auto;
+
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button3 {
+  background-color: #4CAF50;
+  color: black; 
+  border: 2px solid black;
+  margin-left:10%;
+}
+
+.button3:hover {
+  background-color: rgba(6,32,47);
+  color: white;
+}
+
+.desc
+  {
+    font-size: 20px;
+    color:white;
+    font-family:Lato, sans-serif;
+    width:85%;
+  }
+
+.rang
+  {
+  background-color:rgba(6,32,47);
+  color:white;
+  font-weight: lighter;
+
+  }
+
+.link
+  {
+  font-weight:lighter;
+  font-size: 25px;
+  }
+ 
+ .link2
+  {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .search-container
+{
+float:right;
+ margin-right: 20px;
+ padding-top:2px;
+}
+
+.search-container input[type=text]
+{
+  font-size: 13px;
+  padding-top:14px;
+  width: 250px;
+  border: none;
+}
+.search-container button
+{
+
+  background-color: black;
+  border:none;
+  color:white;
+}
+
+.search-container button:hover
+{
+  background-color: black;
+  border:none;
+  color:#4CAF50;
+
+}
+
+
