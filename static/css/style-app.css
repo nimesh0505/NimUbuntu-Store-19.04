@@ -10,7 +10,8 @@ h1
 {
 	 color:#4CAF50;
    font-size:30px ;
- 	font-family: 'Karla';
+ 	font-family: 'Karla'; 
+
 }
 
 h2
@@ -121,6 +122,23 @@ float:right;
   border:none;
   color:#4CAF50;
 
+}
+
+
+img
+{
+-ms-flex-item-align: start;
+align-self: flex-start;
+-ms-flex-negative: 0;
+flex-shrink: 0;
+margin-right: 1rem;
+max-height: 3.75rem;
+max-width: 33.75rem;
+vertical-align: middle;
+width: auto;
+ border:2px #4CAF50 solid;
+ padding:6px;
+border-radius: 50%;
 }
 
 
