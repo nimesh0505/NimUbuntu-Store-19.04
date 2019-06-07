@@ -1,6 +1,6 @@
 from flask import Flask,request,render_template,redirect,url_for
 from pymongo import MongoClient
-
+import re
 
 app = Flask(__name__)
 app.debug = True
@@ -128,8 +128,8 @@ def search():
 		myclient = MongoClient("mongodb://guest:abc1234@ds263156.mlab.com:63156/test_applications")
 		mydb = myclient["test_applications"]
 		mycollections = mydb["applications"]
-		if mycollections.find({'appname':{'$regex' : getsearch }}).count()>0:	
-			cursor = mycollections.find({'appname':{'$regex' : getsearch }})		
+		if mycollections.find({'appname':re.compile(getsearch, re.IGNORECASE)}).count()>0:	
+			cursor = mycollections.find({'appname':re.compile(getsearch, re.IGNORECASE)})		
 			app = list(cursor)
 			myclient.close()
 			return render_template('application.html',app=app)
